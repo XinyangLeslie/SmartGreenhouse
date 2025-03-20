@@ -1,0 +1,7 @@
+# Xcode 项目文件忽略列表
+DerivedData/
+.DS_Store
+xcuserdata/
+build/
+*.xcworkspace
+

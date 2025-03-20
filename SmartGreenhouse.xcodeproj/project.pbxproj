@@ -1,0 +1,772 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		741D7F802C1EB3A900505240 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D7F7F2C1EB3A900505240 /* MainApp.swift */; };
+		741D7F822C1EB3A900505240 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D7F812C1EB3A900505240 /* ContentView.swift */; };
+		741D7F912C1EB3AB00505240 /* SmartGreenhouseAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D7F902C1EB3AB00505240 /* SmartGreenhouseAppTests.swift */; };
+		741D7F9B2C1EB3AB00505240 /* SmartGreenhouseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D7F9A2C1EB3AB00505240 /* SmartGreenhouseUITests.swift */; };
+		741D7F9D2C1EB3AB00505240 /* SmartGreenhouseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D7F9C2C1EB3AB00505240 /* SmartGreenhouseUITestsLaunchTests.swift */; };
+		7422CBCF2D87EDC8001BE95D /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422CBCE2D87EDC4001BE95D /* SpeechRecognizer.swift */; };
+		7422CBD12D87EEEF001BE95D /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422CBD02D87EEDD001BE95D /* Speech.swift */; };
+		7422CBD52D87EF88001BE95D /* SpeechTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422CBD42D87EF7A001BE95D /* SpeechTestView.swift */; };
+		7458DFAB2D8322EE00AA446F /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458DFAA2D8322E600AA446F /* Temperature.swift */; };
+		7458DFAD2D836F3D00AA446F /* TemperatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458DFAC2D836F3100AA446F /* TemperatureViewModel.swift */; };
+		7458DFAF2D83786300AA446F /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458DFAE2D83785A00AA446F /* CameraViewModel.swift */; };
+		7458DFB12D8674DE00AA446F /* ButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458DFB02D8674C600AA446F /* ButtonViewModel.swift */; };
+		7458DFB32D874D7300AA446F /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458DFB22D874D6B00AA446F /* ChartViewModel.swift */; };
+		7458DFB52D875AB300AA446F /* FullScreenCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458DFB42D875A9D00AA446F /* FullScreenCameraView.swift */; };
+		7458DFB72D875B4500AA446F /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458DFB62D875B3900AA446F /* VideoPlayerView.swift */; };
+		7458DFB92D87BC5F00AA446F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458DFB82D87BC5B00AA446F /* Config.swift */; };
+		7458DFBD2D87C5CE00AA446F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458DFBC2D87C5C800AA446F /* ViewController.swift */; };
+		7458DFCC2D87D97D00AA446F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 741D7F832C1EB3AB00505240 /* Assets.xcassets */; };
+		74F4ED302D301206004C9310 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4ED2F2D301200004C9310 /* DetailView.swift */; };
+		74F4ED322D301352004C9310 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4ED312D301350004C9310 /* BluetoothManager.swift */; };
+		74F4ED342D30140F004C9310 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4ED332D30140C004C9310 /* NetworkManager.swift */; };
+		74F4ED3E2D5DC513004C9310 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4ED3C2D5DC50C004C9310 /* User.swift */; };
+		74F4ED482D5DD218004C9310 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4ED462D5DD218004C9310 /* LoginViewModel.swift */; };
+		74F4ED4E2D5E213A004C9310 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4ED4D2D5E212E004C9310 /* LoginView.swift */; };
+		74F4ED522D73CEBC004C9310 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4ED512D73CEB6004C9310 /* UserView.swift */; };
+		74F4ED542D73CEE1004C9310 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4ED532D73CED8004C9310 /* UserViewModel.swift */; };
+		74F4ED562D73CF1B004C9310 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4ED552D73CF16004C9310 /* UserModel.swift */; };
+		74F4ED582D750BDC004C9310 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4ED572D750BD6004C9310 /* MainView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		7458DFCD2D87DCB100AA446F /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = wrapper.scncache;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# compileSceneKitShaders\n";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXContainerItemProxy section */
+		741D7F8D2C1EB3AB00505240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 741D7F742C1EB3A900505240 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 741D7F7B2C1EB3A900505240;
+			remoteInfo = XinyangTestApp;
+		};
+		741D7F972C1EB3AB00505240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 741D7F742C1EB3A900505240 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 741D7F7B2C1EB3A900505240;
+			remoteInfo = XinyangTestApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		741D7F7C2C1EB3A900505240 /* SmartGreenhouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartGreenhouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		741D7F7F2C1EB3A900505240 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
+		741D7F812C1EB3A900505240 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		741D7F832C1EB3AB00505240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		741D7F862C1EB3AB00505240 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		741D7F8C2C1EB3AB00505240 /* SmartGreenhouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartGreenhouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		741D7F902C1EB3AB00505240 /* SmartGreenhouseAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartGreenhouseAppTests.swift; sourceTree = "<group>"; };
+		741D7F962C1EB3AB00505240 /* SmartGreenhouseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartGreenhouseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		741D7F9A2C1EB3AB00505240 /* SmartGreenhouseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartGreenhouseUITests.swift; sourceTree = "<group>"; };
+		741D7F9C2C1EB3AB00505240 /* SmartGreenhouseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartGreenhouseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7422CBCE2D87EDC4001BE95D /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		7422CBD02D87EEDD001BE95D /* Speech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
+		7422CBD42D87EF7A001BE95D /* SpeechTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechTestView.swift; sourceTree = "<group>"; };
+		7458DFAA2D8322E600AA446F /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		7458DFAC2D836F3100AA446F /* TemperatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewModel.swift; sourceTree = "<group>"; };
+		7458DFAE2D83785A00AA446F /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		7458DFB02D8674C600AA446F /* ButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModel.swift; sourceTree = "<group>"; };
+		7458DFB22D874D6B00AA446F /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
+		7458DFB42D875A9D00AA446F /* FullScreenCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCameraView.swift; sourceTree = "<group>"; };
+		7458DFB62D875B3900AA446F /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		7458DFB82D87BC5B00AA446F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		7458DFBC2D87C5C800AA446F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		74C6F8342D87DEFD00D2F329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74F4ED2F2D301200004C9310 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		74F4ED312D301350004C9310 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		74F4ED332D30140C004C9310 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		74F4ED3C2D5DC50C004C9310 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		74F4ED462D5DD218004C9310 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		74F4ED4D2D5E212E004C9310 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		74F4ED512D73CEB6004C9310 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		74F4ED532D73CED8004C9310 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		74F4ED552D73CF16004C9310 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		74F4ED572D750BD6004C9310 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		741D7F792C1EB3A900505240 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		741D7F892C1EB3AB00505240 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		741D7F932C1EB3AB00505240 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		741D7F732C1EB3A900505240 = {
+			isa = PBXGroup;
+			children = (
+				741D7F7E2C1EB3A900505240 /* SmartGreenhouseApp */,
+				741D7F8F2C1EB3AB00505240 /* SmartGreenhouseAppTests */,
+				741D7F992C1EB3AB00505240 /* SmartGreenhouseUITests */,
+				741D7F7D2C1EB3A900505240 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		741D7F7D2C1EB3A900505240 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				741D7F7C2C1EB3A900505240 /* SmartGreenhouse.app */,
+				741D7F8C2C1EB3AB00505240 /* SmartGreenhouseTests.xctest */,
+				741D7F962C1EB3AB00505240 /* SmartGreenhouseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		741D7F7E2C1EB3A900505240 /* SmartGreenhouseApp */ = {
+			isa = PBXGroup;
+			children = (
+				74C6F8342D87DEFD00D2F329 /* Info.plist */,
+				74F4ED492D5DD258004C9310 /* App */,
+				74F4ED4A2D5DD264004C9310 /* Models */,
+				74F4ED4B2D5DD27B004C9310 /* Views */,
+				74F4ED472D5DD218004C9310 /* ViewModels */,
+				74F4ED452D5DD213004C9310 /* Services */,
+				74F4ED442D5DD20E004C9310 /* TestFunction */,
+				74F4ED4C2D5DD2C5004C9310 /* Resources */,
+				741D7F832C1EB3AB00505240 /* Assets.xcassets */,
+				741D7F852C1EB3AB00505240 /* Preview Content */,
+			);
+			path = SmartGreenhouseApp;
+			sourceTree = "<group>";
+		};
+		741D7F852C1EB3AB00505240 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				741D7F862C1EB3AB00505240 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		741D7F8F2C1EB3AB00505240 /* SmartGreenhouseAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				741D7F902C1EB3AB00505240 /* SmartGreenhouseAppTests.swift */,
+			);
+			path = SmartGreenhouseAppTests;
+			sourceTree = "<group>";
+		};
+		741D7F992C1EB3AB00505240 /* SmartGreenhouseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				741D7F9A2C1EB3AB00505240 /* SmartGreenhouseUITests.swift */,
+				741D7F9C2C1EB3AB00505240 /* SmartGreenhouseUITestsLaunchTests.swift */,
+			);
+			path = SmartGreenhouseUITests;
+			sourceTree = "<group>";
+		};
+		74F4ED442D5DD20E004C9310 /* TestFunction */ = {
+			isa = PBXGroup;
+			children = (
+				74F4ED332D30140C004C9310 /* NetworkManager.swift */,
+				74F4ED312D301350004C9310 /* BluetoothManager.swift */,
+				74F4ED2F2D301200004C9310 /* DetailView.swift */,
+				741D7F812C1EB3A900505240 /* ContentView.swift */,
+			);
+			path = TestFunction;
+			sourceTree = "<group>";
+		};
+		74F4ED452D5DD213004C9310 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7458DFBC2D87C5C800AA446F /* ViewController.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		74F4ED472D5DD218004C9310 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7422CBD42D87EF7A001BE95D /* SpeechTestView.swift */,
+				7422CBCE2D87EDC4001BE95D /* SpeechRecognizer.swift */,
+				7458DFB22D874D6B00AA446F /* ChartViewModel.swift */,
+				7458DFB02D8674C600AA446F /* ButtonViewModel.swift */,
+				7458DFAE2D83785A00AA446F /* CameraViewModel.swift */,
+				7458DFAC2D836F3100AA446F /* TemperatureViewModel.swift */,
+				74F4ED532D73CED8004C9310 /* UserViewModel.swift */,
+				74F4ED462D5DD218004C9310 /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		74F4ED492D5DD258004C9310 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7458DFB82D87BC5B00AA446F /* Config.swift */,
+				741D7F7F2C1EB3A900505240 /* MainApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		74F4ED4A2D5DD264004C9310 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7458DFAA2D8322E600AA446F /* Temperature.swift */,
+				74F4ED552D73CF16004C9310 /* UserModel.swift */,
+				74F4ED3C2D5DC50C004C9310 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		74F4ED4B2D5DD27B004C9310 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7422CBD02D87EEDD001BE95D /* Speech.swift */,
+				7458DFB62D875B3900AA446F /* VideoPlayerView.swift */,
+				7458DFB42D875A9D00AA446F /* FullScreenCameraView.swift */,
+				74F4ED572D750BD6004C9310 /* MainView.swift */,
+				74F4ED512D73CEB6004C9310 /* UserView.swift */,
+				74F4ED4D2D5E212E004C9310 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		74F4ED4C2D5DD2C5004C9310 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				74F4ED592D7518D4004C9310 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		74F4ED592D7518D4004C9310 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		741D7F7B2C1EB3A900505240 /* SmartGreenhouse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 741D7FA02C1EB3AB00505240 /* Build configuration list for PBXNativeTarget "SmartGreenhouse" */;
+			buildPhases = (
+				741D7F782C1EB3A900505240 /* Sources */,
+				741D7F792C1EB3A900505240 /* Frameworks */,
+				7458DFC62D87D66500AA446F /* Resources */,
+			);
+			buildRules = (
+				7458DFCD2D87DCB100AA446F /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = SmartGreenhouse;
+			productName = XinyangTestApp;
+			productReference = 741D7F7C2C1EB3A900505240 /* SmartGreenhouse.app */;
+			productType = "com.apple.product-type.application";
+		};
+		741D7F8B2C1EB3AB00505240 /* SmartGreenhouseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 741D7FA32C1EB3AB00505240 /* Build configuration list for PBXNativeTarget "SmartGreenhouseTests" */;
+			buildPhases = (
+				741D7F882C1EB3AB00505240 /* Sources */,
+				741D7F892C1EB3AB00505240 /* Frameworks */,
+				741D7F8A2C1EB3AB00505240 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				741D7F8E2C1EB3AB00505240 /* PBXTargetDependency */,
+			);
+			name = SmartGreenhouseTests;
+			productName = XinyangTestAppTests;
+			productReference = 741D7F8C2C1EB3AB00505240 /* SmartGreenhouseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		741D7F952C1EB3AB00505240 /* SmartGreenhouseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 741D7FA62C1EB3AB00505240 /* Build configuration list for PBXNativeTarget "SmartGreenhouseUITests" */;
+			buildPhases = (
+				741D7F922C1EB3AB00505240 /* Sources */,
+				741D7F932C1EB3AB00505240 /* Frameworks */,
+				741D7F942C1EB3AB00505240 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				741D7F982C1EB3AB00505240 /* PBXTargetDependency */,
+			);
+			name = SmartGreenhouseUITests;
+			productName = XinyangTestAppUITests;
+			productReference = 741D7F962C1EB3AB00505240 /* SmartGreenhouseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		741D7F742C1EB3A900505240 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					741D7F7B2C1EB3A900505240 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					741D7F8B2C1EB3AB00505240 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 741D7F7B2C1EB3A900505240;
+					};
+					741D7F952C1EB3AB00505240 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 741D7F7B2C1EB3A900505240;
+					};
+				};
+			};
+			buildConfigurationList = 741D7F772C1EB3A900505240 /* Build configuration list for PBXProject "SmartGreenhouse" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 741D7F732C1EB3A900505240;
+			productRefGroup = 741D7F7D2C1EB3A900505240 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				741D7F7B2C1EB3A900505240 /* SmartGreenhouse */,
+				741D7F8B2C1EB3AB00505240 /* SmartGreenhouseTests */,
+				741D7F952C1EB3AB00505240 /* SmartGreenhouseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		741D7F8A2C1EB3AB00505240 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		741D7F942C1EB3AB00505240 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7458DFC62D87D66500AA446F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7458DFCC2D87D97D00AA446F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		741D7F782C1EB3A900505240 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7458DFB32D874D7300AA446F /* ChartViewModel.swift in Sources */,
+				7458DFB72D875B4500AA446F /* VideoPlayerView.swift in Sources */,
+				741D7F822C1EB3A900505240 /* ContentView.swift in Sources */,
+				74F4ED582D750BDC004C9310 /* MainView.swift in Sources */,
+				74F4ED302D301206004C9310 /* DetailView.swift in Sources */,
+				74F4ED3E2D5DC513004C9310 /* User.swift in Sources */,
+				74F4ED542D73CEE1004C9310 /* UserViewModel.swift in Sources */,
+				74F4ED342D30140F004C9310 /* NetworkManager.swift in Sources */,
+				74F4ED322D301352004C9310 /* BluetoothManager.swift in Sources */,
+				741D7F802C1EB3A900505240 /* MainApp.swift in Sources */,
+				7422CBD52D87EF88001BE95D /* SpeechTestView.swift in Sources */,
+				7458DFB12D8674DE00AA446F /* ButtonViewModel.swift in Sources */,
+				7422CBD12D87EEEF001BE95D /* Speech.swift in Sources */,
+				7458DFAF2D83786300AA446F /* CameraViewModel.swift in Sources */,
+				74F4ED4E2D5E213A004C9310 /* LoginView.swift in Sources */,
+				7422CBCF2D87EDC8001BE95D /* SpeechRecognizer.swift in Sources */,
+				7458DFAB2D8322EE00AA446F /* Temperature.swift in Sources */,
+				74F4ED522D73CEBC004C9310 /* UserView.swift in Sources */,
+				74F4ED482D5DD218004C9310 /* LoginViewModel.swift in Sources */,
+				74F4ED562D73CF1B004C9310 /* UserModel.swift in Sources */,
+				7458DFB92D87BC5F00AA446F /* Config.swift in Sources */,
+				7458DFBD2D87C5CE00AA446F /* ViewController.swift in Sources */,
+				7458DFB52D875AB300AA446F /* FullScreenCameraView.swift in Sources */,
+				7458DFAD2D836F3D00AA446F /* TemperatureViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		741D7F882C1EB3AB00505240 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				741D7F912C1EB3AB00505240 /* SmartGreenhouseAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		741D7F922C1EB3AB00505240 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				741D7F9B2C1EB3AB00505240 /* SmartGreenhouseUITests.swift in Sources */,
+				741D7F9D2C1EB3AB00505240 /* SmartGreenhouseUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		741D7F8E2C1EB3AB00505240 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 741D7F7B2C1EB3A900505240 /* SmartGreenhouse */;
+			targetProxy = 741D7F8D2C1EB3AB00505240 /* PBXContainerItemProxy */;
+		};
+		741D7F982C1EB3AB00505240 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 741D7F7B2C1EB3A900505240 /* SmartGreenhouse */;
+			targetProxy = 741D7F972C1EB3AB00505240 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		741D7F9E2C1EB3AB00505240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/XinyangTestApp/Info.plist\n";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_MAP_FILE_PATH = "";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		741D7F9F2C1EB3AB00505240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/XinyangTestApp/Info.plist\n";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_MAP_FILE_PATH = "";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		741D7FA12C1EB3AB00505240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartGreenhouseApp/Preview Content\"";
+				DONT_GENERATE_INFOPLIST_FILE = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/SmartGreenhouseApp/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Xinyang.XinyangTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRINGS_FILE_INFOPLIST_RENAME = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		741D7FA22C1EB3AB00505240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartGreenhouseApp/Preview Content\"";
+				DONT_GENERATE_INFOPLIST_FILE = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/SmartGreenhouseApp/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Xinyang.XinyangTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRINGS_FILE_INFOPLIST_RENAME = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		741D7FA42C1EB3AB00505240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Xinyang.XinyangTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartGreenhouse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartGreenhouse";
+			};
+			name = Debug;
+		};
+		741D7FA52C1EB3AB00505240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Xinyang.XinyangTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartGreenhouse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartGreenhouse";
+			};
+			name = Release;
+		};
+		741D7FA72C1EB3AB00505240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Xinyang.XinyangTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XinyangTestApp;
+			};
+			name = Debug;
+		};
+		741D7FA82C1EB3AB00505240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Xinyang.XinyangTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XinyangTestApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		741D7F772C1EB3A900505240 /* Build configuration list for PBXProject "SmartGreenhouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				741D7F9E2C1EB3AB00505240 /* Debug */,
+				741D7F9F2C1EB3AB00505240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		741D7FA02C1EB3AB00505240 /* Build configuration list for PBXNativeTarget "SmartGreenhouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				741D7FA12C1EB3AB00505240 /* Debug */,
+				741D7FA22C1EB3AB00505240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		741D7FA32C1EB3AB00505240 /* Build configuration list for PBXNativeTarget "SmartGreenhouseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				741D7FA42C1EB3AB00505240 /* Debug */,
+				741D7FA52C1EB3AB00505240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		741D7FA62C1EB3AB00505240 /* Build configuration list for PBXNativeTarget "SmartGreenhouseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				741D7FA72C1EB3AB00505240 /* Debug */,
+				741D7FA82C1EB3AB00505240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 741D7F742C1EB3A900505240 /* Project object */;
+}
