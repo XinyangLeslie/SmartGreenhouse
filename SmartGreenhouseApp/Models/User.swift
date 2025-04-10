@@ -1,10 +1,3 @@
-//
-//  User.swift
-//  XinyangTestApp
-//
-//  Created by 张新杨 on 2025/2/13.
-//
-
 import Foundation
 
 struct User:Identifiable, Codable {

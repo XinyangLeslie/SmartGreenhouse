@@ -1,8 +1,6 @@
 //
 //  XinyangTestAppTests.swift
-//  XinyangTestAppTests
 //
-//  Created by 张新杨 on 2024/6/16.
 //
 
 import XCTest

@@ -1,8 +1,6 @@
 //
 //  DetailView.swift
-//  XinyangTestApp
 //
-//  Created by 张新杨 on 2025/1/9.
 //
 
 // DetailView.swift

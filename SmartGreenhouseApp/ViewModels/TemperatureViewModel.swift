@@ -1,20 +1,18 @@
 //
 //  TemperatureViewModel.swift
-//  XinyangTestApp
 //
-//  Created by 张新杨 on 2025/3/13.
 //
 
 import Foundation
 
-
 class TemperatureViewModel: ObservableObject {
-    @Published var latestTemperature: String = "--°C" // 默认值
-    @Published var latestHumidity: String = "--%" // 默认湿度值
+    @Published var latestTemperature: String = "--°C"
+    @Published var latestHumidity: String = "--%"
 
-    let apiURL = "http://\(Config.serverIP):5001/api/temperature" // 修改为你的 API 地址
-
-    func fetchLatestTemperature() {
+    func fetchLatestTemperature(userID: String) {
+        // 👇 拼接带 user_id 的 API 地址
+        let apiURL = "http://\(Config.serverIP):5001/api/temperature?user_id=\(userID)"
+        
         guard let url = URL(string: apiURL) else {
             print("❌ API URL 无效")
             return
@@ -28,12 +26,11 @@ class TemperatureViewModel: ObservableObject {
 
             if let data = data {
                 do {
-                    print(data)
                     let decodedData = try JSONDecoder().decode(TemperatureResponse.self, from: data)
                     DispatchQueue.main.async {
                         if let latestData = decodedData.data.first {
-                            self.latestTemperature = "\(latestData.temperature)°C" // ✅ 更新最新温度
-                            self.latestHumidity = "\(latestData.humidity)%" // ✅ 更新湿度
+                            self.latestTemperature = "\(latestData.temperature)°C"
+                            self.latestHumidity = "\(latestData.humidity)%"
                         }
                     }
                 } catch {

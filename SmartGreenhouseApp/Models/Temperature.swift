@@ -1,27 +1,18 @@
-//
-//  Temperature.swift
-//  XinyangTestApp
-//
-//  Created by 张新杨 on 2025/3/13.
-//
-
 import Foundation
 
-// 解析 JSON 响应的外层结构
-// 定义 API 响应的数据结构
-struct TemperatureResponse: Codable {
-    struct DataItem: Codable {
-        let temperature: Float
-        let humidity: Float
-    }
-    let data: [DataItem]
+// 用于 Chart 折线图、数据列表等显示的单项数据
+struct TemperatureData: Codable, Identifiable {
+    var id: UUID { UUID() } // 保证 SwiftUI ForEach 可用
+    let temperature: Double
+    let humidity: Int
+    let created_at: String
+    let device_id: String?
+    let location: String?
 }
 
-// 解析单个温度数据项
-struct TemperatureData: Codable, Identifiable {
-    var id: UUID { UUID() } // 生成唯一 ID
-    let temperature: Double
-    let created_at: String
+// 外层 JSON 响应结构（你 API 返回的是 data: [...]）
+struct TemperatureResponse: Codable {
+    let data: [TemperatureData]
 }
 
 

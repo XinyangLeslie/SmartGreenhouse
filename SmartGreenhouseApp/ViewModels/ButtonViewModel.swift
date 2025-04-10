@@ -1,8 +1,6 @@
 //
 //  ButtonViewModel.swift
-//  XinyangTestApp
 //
-//  Created by 张新杨 on 2025/3/15.
 //
 
 import Foundation
@@ -11,6 +9,7 @@ class ButtonViewModel: ObservableObject {
     @Published var isWaterPumpOn = false
     @Published var isFanOn = false
     @Published var isLedOn = false
+    @Published var isBuzzerOn = false
 
     private let baseURL = "http://\(Config.serverIP):5001"
 
@@ -18,6 +17,7 @@ class ButtonViewModel: ObservableObject {
         fetchStatus(for: "servo") { self.isWaterPumpOn = $0 }
         fetchStatus(for: "fan") { self.isFanOn = $0 }
         fetchStatus(for: "led") { self.isLedOn = $0 }
+        fetchStatus(for: "buzzer") { self.isLedOn = $0 }
     }
 
     private func fetchStatus(for device: String, completion: @escaping (Bool) -> Void) {
@@ -55,6 +55,8 @@ class ButtonViewModel: ObservableObject {
                     self.isFanOn = isOn
                 case "led":
                     self.isLedOn = isOn
+                case "buzzer":
+                    self.isBuzzerOn = isOn
                 default:
                     break
                 }

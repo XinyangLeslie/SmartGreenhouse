@@ -1,46 +1,59 @@
-
 //
 //  MainView.swift
-//  XinyangTestApp
 //
-//  Created by 张新杨 on 2025/3/2.
 //
 
 import SwiftUI
 import WebKit
 
-// 主结构体
+//主结构体
 struct MainView: View {
+    var user: User
     @State private var selectedTab = 0
-    
-    
-    
+    @StateObject private var notifyVM = NotificationViewModel()
+
     var body: some View {
-        NavigationStack{
-            VStack {
-                if selectedTab == 0 {
-                    DashboardView()
-                } else if selectedTab == 1 {
-                    ControlPanelView()
-                } else if selectedTab == 2 {
-                    CameraView()
-                } else if selectedTab == 3 {
-                    HomeView()
+        ZStack {
+            NavigationStack {
+                VStack {
+                    if selectedTab == 0 {
+                        DashboardView(userID: user.id)
+                    } else if selectedTab == 1 {
+                        ControlPanelView()
+                    } else if selectedTab == 2 {
+                        CameraView()
+                    } else if selectedTab == 3 {
+                        HomeView()
+                    }
+
+                    CustomTabBar(selectedTab: $selectedTab)
+                        .background(Color(.clear))
                 }
-                
-                //Spacer()
-                CustomTabBar(selectedTab: $selectedTab).background(Color(.clear))
-            }.background(
-                Image("background3")
-                    .resizable()
-                    .scaledToFill()
-                    .blur(radius: 8)
-                    .ignoresSafeArea()
-            )
+                .background(
+                    Image("background3")
+                        .resizable()
+                        .scaledToFill()
+                        .blur(radius: 8)
+                        .ignoresSafeArea()
+                )
+            }
+
+            // ✅ 顶部弹出提示
+            if notifyVM.showBanner {
+                TopBannerView(message: notifyVM.notificationMessage)
+                    .transition(.move(edge: .top))
+                    .zIndex(1000) // 放在最上层
+            }
         }
-        
+        .onAppear {
+            notifyVM.startPollingNotifications()
+        }
+        .onDisappear {
+            notifyVM.stopPolling()
+        }
     }
 }
+
 
 // 首页按钮部分
 struct QuickButtonView: View {
@@ -97,7 +110,12 @@ struct QuickButton: View {
 }
 // 首页仪表盘界面
 struct DashboardView: View {
+    var userID: String // 接收 userID
     @StateObject private var viewModel = TemperatureViewModel() // 绑定 ViewModel
+    @StateObject var lightVM = LightViewModel()
+    
+    @StateObject var chartVM = ChartViewModel()
+
     
     var body: some View {
         
@@ -113,23 +131,38 @@ struct DashboardView: View {
                     SensorCard(title: "Humidity", value: viewModel.latestHumidity, icon: "drop.fill")
                 }
                 HStack {
-                    SensorCard(title: "Light", value: "500 Lux", icon: "sun.max.fill")
-                    SensorCard(title: "CO₂", value: "400 ppm", icon: "leaf.fill")
+                    SensorCard(title: "Light", value: lightVM.latestLight, icon: "sun.max.fill")
+                    SensorCard(title: "Soil humidity", value: "40%", icon: "leaf.fill")
                 }
                 
                 
-                ChartView()
+                ChartView(userID: userID)
+                
+                // 柱状图：光照对比
+                LightBarChartView(viewModel: chartVM)
                 QuickButtonView()
             }
             .cornerRadius(20)
             // 设置宽度为屏幕宽度的96%
             .frame(width: UIScreen.main.bounds.width * 0.92)
         }.onAppear {
-            viewModel.fetchLatestTemperature() // ✅ 页面加载时获取最新温度
+            print("当前账户ID: \(userID)")
+            viewModel.fetchLatestTemperature(userID: userID) // ✅ 页面加载时获取最新温度
+            lightVM.fetchLatestLight(userID: userID) // ✅ 页面加载时获取最新光照
+            
+            chartVM.selectedChart = 2  // 2 是 light 对应的 chart index
+            chartVM.userID = userID
+            chartVM.fetchChartData()
+
         }
         
     }
 }
+
+
+
+
+
 
 // 设备控制界面
 struct ControlPanelView: View {
@@ -153,6 +186,9 @@ struct ControlPanelView: View {
 
                 ToggleView(title: "LED Light", isOn: $viewModel.isLedOn, onToggle: { newValue in
                     viewModel.toggleDevice(device: "led", isOn: newValue)
+                })
+                ToggleView(title: "Buzzer", isOn: $viewModel.isBuzzerOn, onToggle: { newValue in
+                    viewModel.toggleDevice(device: "buzzer", isOn: newValue)
                 })
             }
             .padding()
@@ -191,51 +227,6 @@ struct ToggleView: View {
     }
 }
 
-
-// 摄像头监控界面
-struct CameraView: View {
-    @State private var isFullScreen = false
-    @State private var isPlayback = false
-    private let streamURL = "http://\(Config.serverIP):8080/?action=stream"
-
-    var body: some View {
-        ScrollView {
-            VStack {
-                Text("Live Camera")
-                    .font(.largeTitle)
-                    .bold()
-                    .foregroundColor(Color.white)
-
-                Button(action: {
-                    isFullScreen.toggle()
-                }) {
-                    CameraViewModel(urlString: streamURL)
-                        .frame(width: 300, height: 200)
-                        .cornerRadius(10)
-                        .shadow(radius: 5)
-                }
-                .buttonStyle(PlainButtonStyle())
-
-                Button(action: {
-                    isPlayback.toggle()
-                }) {
-                    Text("View Past 1 Hour")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                }
-                .sheet(isPresented: $isPlayback) {
-                    VideoPlayerView()
-                }
-            }
-        }
-        .fullScreenCover(isPresented: $isFullScreen) {
-            FullScreenCameraView(streamURL: streamURL, isFullScreen: $isFullScreen)
-        }
-    }
-}
 
 
 
@@ -336,70 +327,7 @@ struct SensorCard: View {
 }
 
 
-import Charts
 
-struct ChartView: View {
-    @StateObject private var viewModel = ChartViewModel()
-
-    var body: some View {
-        VStack(spacing: 4) {
-            Text("ChartView")
-                .font(.title3)
-                .foregroundColor(.white)
-
-            // 按钮组
-            HStack(spacing: 1) {
-                Spacer()
-                ChartButton(icon: "chart.bar.fill", text: "Temperature", index: 0, viewModel: viewModel)
-                Spacer()
-                ChartButton(icon: "chart.pie.fill", text: "Humidity", index: 1, viewModel: viewModel)
-                Spacer()
-                ChartButton(icon: "waveform.path.ecg.rectangle.fill", text: "Light", index: 2, viewModel: viewModel)
-                Spacer()
-            }.padding(2)
-
-            // ✅ 显示折线图，并修改坐标轴颜色
-            Chart {
-                ForEach(viewModel.chartData) { entry in
-                    LineMark(
-                        x: .value("Time", entry.label),
-                        y: .value("Value", entry.value)
-                    )
-                    .foregroundStyle(.blue)  // ✅ 线条颜色
-                    .symbol(.circle)
-                }
-            }
-            .chartXAxis {
-                AxisMarks {
-                    AxisGridLine()
-                        .foregroundStyle(.white.opacity(0.5)) // ✅ X轴网格线白色
-                    AxisTick()
-                        .foregroundStyle(.white) // ✅ X轴刻度白色
-                    AxisValueLabel()
-                        .foregroundStyle(.white) // ✅ X轴标签白色
-                }
-            }
-            .chartYAxis {
-                AxisMarks {
-                    AxisGridLine()
-                        .foregroundStyle(.white.opacity(0.5)) // ✅ Y轴网格线白色
-                    AxisTick()
-                        .foregroundStyle(.white) // ✅ Y轴刻度白色
-                    AxisValueLabel()
-                        .foregroundStyle(.white) // ✅ Y轴标签白色
-                }
-            }
-            .frame(height: 200)
-        }
-        .padding()
-        .background(Color.gray.opacity(0.3))
-        .cornerRadius(16)
-        .padding()
-        .onAppear {
-            viewModel.fetchChartData() // ✅ 页面加载时获取数据
-        }
-    }
-}
 
 
 // ✅ 统一的按钮组件
@@ -430,14 +358,24 @@ struct ChartButton: View {
     }
 }
 
-
-
 // 预览
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(user: User(
+            id: "user_123",
+            username: "PreviewUser",
+            email: "preview@example.com",
+            phoneNumber: "0000000000",
+            isPhoneVerified: true,
+            verificationCode: nil,
+            role: .admin,
+            createdAt: "2025-01-01",
+            ownedDevices: [],
+            avatarUrl: nil
+        ))
     }
 }
+
 
 
 

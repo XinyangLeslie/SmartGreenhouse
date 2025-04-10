@@ -1,13 +1,13 @@
 //
 //  ChartViewModel.swift
-//  XinyangTestApp
 //
-//  Created by 张新杨 on 2025/3/16.
 //
 
 import Foundation
 
 class ChartViewModel: ObservableObject {
+    var userID: String = ""
+    
     @Published var selectedChart: Int = 0
     @Published var chartData: [ChartData] = []
 
@@ -15,19 +15,23 @@ class ChartViewModel: ObservableObject {
 
     func fetchChartData() {
         var endpoint = ""
+        
+        // 增加一个user_id属性：
+        
+        
         switch selectedChart {
         case 0:
             endpoint = "/api/get-TempHum/temperature"
         case 1:
             endpoint = "/api/get-TempHum/humidity"
         case 2:
-            endpoint = "/api/get-light"
+            endpoint = "/api/get-light/light"
         default:
             return
         }
 
-        guard let url = URL(string: "\(baseURL)\(endpoint)") else { return }
-
+        guard let url = URL(string: "\(baseURL)\(endpoint)?user_id=\(userID)") else { return }
+        
         URLSession.shared.dataTask(with: url) { data, response, error in
             DispatchQueue.main.async {
                 if let error = error {

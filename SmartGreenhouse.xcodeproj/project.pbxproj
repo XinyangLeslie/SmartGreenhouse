@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74109C8C2D9C7CA3001CF274 /* UserTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74109C8B2D9C7C93001CF274 /* UserTestView.swift */; };
+		74109C912D9CDA58001CF274 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74109C902D9CD990001CF274 /* ChartView.swift */; };
+		74109C982DA34AFE001CF274 /* LightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74109C972DA34AFA001CF274 /* LightViewModel.swift */; };
+		74109C9A2DA35573001CF274 /* LightBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74109C992DA35570001CF274 /* LightBarChartView.swift */; };
+		74109CA02DA36C1E001CF274 /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74109C9F2DA36C1C001CF274 /* ImageItem.swift */; };
+		74109CA22DA36C52001CF274 /* ImageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74109CA12DA36C50001CF274 /* ImageListViewModel.swift */; };
+		74109CA42DA36D04001CF274 /* ImageGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74109CA32DA36D02001CF274 /* ImageGalleryView.swift */; };
+		74109CA62DA36D6B001CF274 /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74109CA52DA36D68001CF274 /* ImageGalleryViewModel.swift */; };
+		74109CA82DA5D1A3001CF274 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74109CA72DA5D1A0001CF274 /* NotificationViewModel.swift */; };
+		74109CAA2DA5D1D8001CF274 /* TopBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74109CA92DA5D1D7001CF274 /* TopBannerView.swift */; };
+		74109CAC2DA6FD81001CF274 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74109CAB2DA6FD79001CF274 /* CameraView.swift */; };
 		741D7F802C1EB3A900505240 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D7F7F2C1EB3A900505240 /* MainApp.swift */; };
 		741D7F822C1EB3A900505240 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D7F812C1EB3A900505240 /* ContentView.swift */; };
 		741D7F912C1EB3AB00505240 /* SmartGreenhouseAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D7F902C1EB3AB00505240 /* SmartGreenhouseAppTests.swift */; };
@@ -69,6 +80,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74109C8B2D9C7C93001CF274 /* UserTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTestView.swift; sourceTree = "<group>"; };
+		74109C902D9CD990001CF274 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		74109C972DA34AFA001CF274 /* LightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightViewModel.swift; sourceTree = "<group>"; };
+		74109C992DA35570001CF274 /* LightBarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightBarChartView.swift; sourceTree = "<group>"; };
+		74109C9F2DA36C1C001CF274 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
+		74109CA12DA36C50001CF274 /* ImageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewModel.swift; sourceTree = "<group>"; };
+		74109CA32DA36D02001CF274 /* ImageGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryView.swift; sourceTree = "<group>"; };
+		74109CA52DA36D68001CF274 /* ImageGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewModel.swift; sourceTree = "<group>"; };
+		74109CA72DA5D1A0001CF274 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		74109CA92DA5D1D7001CF274 /* TopBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBannerView.swift; sourceTree = "<group>"; };
+		74109CAB2DA6FD79001CF274 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		741D7F7C2C1EB3A900505240 /* SmartGreenhouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartGreenhouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		741D7F7F2C1EB3A900505240 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		741D7F812C1EB3A900505240 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -213,6 +235,10 @@
 		74F4ED472D5DD218004C9310 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				74109CA72DA5D1A0001CF274 /* NotificationViewModel.swift */,
+				74109CA52DA36D68001CF274 /* ImageGalleryViewModel.swift */,
+				74109CA12DA36C50001CF274 /* ImageListViewModel.swift */,
+				74109C972DA34AFA001CF274 /* LightViewModel.swift */,
 				7422CBD42D87EF7A001BE95D /* SpeechTestView.swift */,
 				7422CBCE2D87EDC4001BE95D /* SpeechRecognizer.swift */,
 				7458DFB22D874D6B00AA446F /* ChartViewModel.swift */,
@@ -237,6 +263,7 @@
 		74F4ED4A2D5DD264004C9310 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				74109C9F2DA36C1C001CF274 /* ImageItem.swift */,
 				7458DFAA2D8322E600AA446F /* Temperature.swift */,
 				74F4ED552D73CF16004C9310 /* UserModel.swift */,
 				74F4ED3C2D5DC50C004C9310 /* User.swift */,
@@ -247,6 +274,12 @@
 		74F4ED4B2D5DD27B004C9310 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				74109CAB2DA6FD79001CF274 /* CameraView.swift */,
+				74109CA92DA5D1D7001CF274 /* TopBannerView.swift */,
+				74109CA32DA36D02001CF274 /* ImageGalleryView.swift */,
+				74109C992DA35570001CF274 /* LightBarChartView.swift */,
+				74109C902D9CD990001CF274 /* ChartView.swift */,
+				74109C8B2D9C7C93001CF274 /* UserTestView.swift */,
 				7422CBD02D87EEDD001BE95D /* Speech.swift */,
 				7458DFB62D875B3900AA446F /* VideoPlayerView.swift */,
 				7458DFB42D875A9D00AA446F /* FullScreenCameraView.swift */,
@@ -403,20 +436,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				7458DFB32D874D7300AA446F /* ChartViewModel.swift in Sources */,
+				74109CA02DA36C1E001CF274 /* ImageItem.swift in Sources */,
+				74109C912D9CDA58001CF274 /* ChartView.swift in Sources */,
+				74109C982DA34AFE001CF274 /* LightViewModel.swift in Sources */,
 				7458DFB72D875B4500AA446F /* VideoPlayerView.swift in Sources */,
 				741D7F822C1EB3A900505240 /* ContentView.swift in Sources */,
+				74109CA22DA36C52001CF274 /* ImageListViewModel.swift in Sources */,
 				74F4ED582D750BDC004C9310 /* MainView.swift in Sources */,
+				74109CAC2DA6FD81001CF274 /* CameraView.swift in Sources */,
+				74109CA42DA36D04001CF274 /* ImageGalleryView.swift in Sources */,
 				74F4ED302D301206004C9310 /* DetailView.swift in Sources */,
 				74F4ED3E2D5DC513004C9310 /* User.swift in Sources */,
 				74F4ED542D73CEE1004C9310 /* UserViewModel.swift in Sources */,
+				74109C8C2D9C7CA3001CF274 /* UserTestView.swift in Sources */,
 				74F4ED342D30140F004C9310 /* NetworkManager.swift in Sources */,
 				74F4ED322D301352004C9310 /* BluetoothManager.swift in Sources */,
 				741D7F802C1EB3A900505240 /* MainApp.swift in Sources */,
 				7422CBD52D87EF88001BE95D /* SpeechTestView.swift in Sources */,
 				7458DFB12D8674DE00AA446F /* ButtonViewModel.swift in Sources */,
+				74109CAA2DA5D1D8001CF274 /* TopBannerView.swift in Sources */,
 				7422CBD12D87EEEF001BE95D /* Speech.swift in Sources */,
+				74109C9A2DA35573001CF274 /* LightBarChartView.swift in Sources */,
 				7458DFAF2D83786300AA446F /* CameraViewModel.swift in Sources */,
+				74109CA62DA36D6B001CF274 /* ImageGalleryViewModel.swift in Sources */,
 				74F4ED4E2D5E213A004C9310 /* LoginView.swift in Sources */,
+				74109CA82DA5D1A3001CF274 /* NotificationViewModel.swift in Sources */,
 				7422CBCF2D87EDC8001BE95D /* SpeechRecognizer.swift in Sources */,
 				7458DFAB2D8322EE00AA446F /* Temperature.swift in Sources */,
 				74F4ED522D73CEBC004C9310 /* UserView.swift in Sources */,
@@ -595,6 +639,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SmartGreenhouseApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 72DLZS2K3Q;
 				DONT_GENERATE_INFOPLIST_FILE = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -612,7 +657,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = Xinyang.XinyangTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xinyang.SmartGreenhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRINGS_FILE_INFOPLIST_RENAME = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -629,6 +674,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SmartGreenhouseApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 72DLZS2K3Q;
 				DONT_GENERATE_INFOPLIST_FILE = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -646,7 +692,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = Xinyang.XinyangTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xinyang.SmartGreenhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRINGS_FILE_INFOPLIST_RENAME = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
